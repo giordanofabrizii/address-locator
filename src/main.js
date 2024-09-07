@@ -1,12 +1,9 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import tt from '@tomtom-international/web-sdk-maps';
+// main.js
 
-createApp(App).mount('#app')
+import { createApp } from 'vue';
+import './style.css';
+import App from './App.vue';
+// import '@tomtom-international/web-sdk-plugin-searchbox/dist/SearchBox.css';
 
-
-const map = tt.map({
-    key: "9ndAiLQMA0GuE3FRyeJN3u42T2H4UMvU",
-    container: "map"
-});
+// Crea l'app Vue
+createApp(App).mount('#app');
