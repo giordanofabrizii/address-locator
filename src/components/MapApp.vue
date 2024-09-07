@@ -43,6 +43,15 @@ export default {
                     center: firstResult.position,
                     zoom: 14,
                 });
+
+                // Creazione marker
+                new tt.Marker()
+                    .setLngLat(firstResult.position)
+                    .setPopup(new tt.Popup({ offset: 5 }).setHTML(`
+                        <h1>${firstResult.address.municipality || 'Località'}</h1>
+                        <p>${firstResult.address.countrySubdivision || ''} ${firstResult.address.countrySecondarySubdivision || ''}</p>
+                    `))
+                    .addTo(map);
             } else {
                 console.log("Nessun risultato trovato.");
             }
