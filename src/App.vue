@@ -10,6 +10,10 @@
 
 <template>
   <MapApp/>
+  <form action="google.com">
+    <input type="text" id="latitude" name="latitude">
+    <input type="text" id="longitude" name="longitude">
+  </form>
 </template>
 
 <style scoped>

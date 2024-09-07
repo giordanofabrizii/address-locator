@@ -52,6 +52,10 @@ export default {
                         <p>${firstResult.address.countrySubdivision || ''} ${firstResult.address.countrySecondarySubdivision || ''}</p>
                     `))
                     .addTo(map);
+
+                // save the datas
+                document.getElementById('latitude').value = firstResult.position.lat;
+                document.getElementById('longitude').value = firstResult.position.lng;
             } else {
                 console.log("Nessun risultato trovato.");
             }
